@@ -31,6 +31,7 @@ def get_stadium_coordinates(stadium_name):
     r = requests.get(WIKIPEDIA_URL + stadium_name)
 
     stadium_soup = BeautifulSoup(r.content, "lxml")
+    #TODO(Miles): Update for geo-dms
     location_html = stadium_soup.select_one("span.geo-dec")
     if not location_html:
         return None  # Stadium not found
