@@ -38,6 +38,8 @@ def get_stadium_coordinates(stadium_name):
     location = location_html.get_text().encode('ascii', 'ignore')
     latitude, longitude = location.split()
 
+    print latitude, longitude
+
     # North and east are positive, south and west are negative
     sign_dict = {'N': 1, 'E': 1, 'S': -1, 'W': -1}
 
